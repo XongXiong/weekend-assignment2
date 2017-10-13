@@ -1,3 +1,43 @@
-h1 {
-    color: red;
+#calculator {
+    border-style: solid;
+    border-width: 1px;
+    width: 600px;
 }
+
+#operators {
+    margin: 20px 0px 30px 0px;
+}
+
+input {
+    height: 75px;
+    width: 500px;
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+#result {
+font-size: 50px;
+font-weight: bold;
+margin-top: 50px;
+}
+
+#calculate {
+    height: 75px;
+    width: 500px;
+    font-size: 36px;
+}
+
+.opBut {
+    height: 75px;
+    width: 75px;
+    font-size: 36px;
+}
+
+body {
+    background-color: lightgrey;
+}
+
+h1 {
+    font-size: 72px;
+}
+
