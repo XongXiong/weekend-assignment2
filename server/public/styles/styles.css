@@ -42,3 +42,10 @@ h1 {
     font-size: 72px;
 }
 
+.selectedButton {
+    background-color: darkgray;
+}
+
+.selectedButton:focus {
+    outline: 0;
+}

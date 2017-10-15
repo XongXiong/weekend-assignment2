@@ -30,19 +30,26 @@ var operator = '';
 
 function adding(){
     operator = '+';
+    $('.opBut').removeClass('selectedButton');
+    $(this).addClass('selectedButton');
 }
 
 function subtracting(){
     operator = '-';
+    $('.opBut').removeClass('selectedButton');
+    $(this).addClass('selectedButton');
 }
 
 function multiplying(){
     operator = '*';
-  
+    $('.opBut').removeClass('selectedButton');
+    $(this).addClass('selectedButton');
 }
 
 function dividing(){
     operator = '/';
+    $('.opBut').removeClass('selectedButton');
+    $(this).addClass('selectedButton');
 }
 
 function calculate() {
