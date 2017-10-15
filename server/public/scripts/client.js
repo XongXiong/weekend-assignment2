@@ -23,7 +23,7 @@ function clickHandler() {
 
 function resetResult(){
     $('#results').empty();
-    $('#result').replaceWith('<div id="result">Result = Well you have to calculate dummy</div>')
+    $('#result').replaceWith('<div id="result">Result = Well you have to calculate dummy ;P</div>')
 }
 
 var operator = '';
