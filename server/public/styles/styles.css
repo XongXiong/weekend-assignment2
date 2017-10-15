@@ -1,7 +1,7 @@
 #calculator {
     border-style: solid;
     border-width: 1px;
-    width: 600px;
+    width: 525px;
 }
 
 #operators {
@@ -19,16 +19,27 @@ margin-top: 50px;
     width: 500px;
     font-size: 25px;
     margin-bottom: 10px;
+    font-weight: bold;
+    font-family: sans-serif;
+    background-color: orange;
+    color: black;
 }
 
 .opBut, .numButs {
     height: 60px;
     width: 60px;
     font-size: 36px;
+    font-weight: bold;
+    font-family: sans-serif;
+    background-color: orange;
+    color: black;
+
 }
 
 body {
-    background-color: lightgrey;
+    background-color: black;
+    color: orange;
+    font-family: sans-serif;
 }
 
 h1 {
@@ -36,10 +47,14 @@ h1 {
 }
 
 .selectedButton {
-    background-color: darkgray;
+    background-color: darkgoldenrod;
 }
 
 .selectedButton:focus {
     outline: 0;
+}
+
+::-webkit-input-placeholder {
+    color: black;
 }
 

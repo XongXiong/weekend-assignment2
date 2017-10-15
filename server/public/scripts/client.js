@@ -66,6 +66,9 @@ function calculate() {
         url: '/calculator',
         data: {x, y, operator}
     }) .done(function(response){
+        if (response.result === null) {
+            alert('Enter numbers!');
+        }
         // Uses the result returned from the server and posts it to the DOM
         $('#result').text("Result = " + response.result);
     }) .fail(function(message){
