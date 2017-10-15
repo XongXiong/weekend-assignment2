@@ -9,10 +9,12 @@ app.use(bodyParser.urlencoded({extended:true}));
 
 app.post('/calculator', function(req, res) {
     console.log(req.body);
+    // Create variabes serverside to make things look prettier
     var x = parseInt(req.body.x);
     var y = parseInt(req.body.y);
     var operator = req.body.operator;
     var result = 0;
+    // Run switch statement to run calculations to return a result. 
     switch(operator) {
         case '+':
             result = x + y;
@@ -27,10 +29,8 @@ app.post('/calculator', function(req, res) {
             result = x / y;
             break;
     }
-    console.log(result);
-    resultObj = {result}
-    console.log(resultObj);
-    res.send(resultObj);
+    
+    res.send({result});
 }) 
 
 app.listen(port , function(){
