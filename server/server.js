@@ -29,7 +29,7 @@ app.post('/calculator', function(req, res) {
             result = x / y;
             break;
     }
-    
+    // Sends the result as an object to the client to post to the DOM
     res.send({result});
 }) 
 
