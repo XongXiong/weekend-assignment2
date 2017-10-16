@@ -8,7 +8,7 @@ function main() {
 // This launches the calculator on start and also contains code to reset the calculator
 function launchCalc() {
     $('#inputs').empty();
-    $('#calculator').prepend('<div id="inputs"><div id= "calcLine"><input type="number" placeholder="Enter Number Here" id="x"><input type="number" placeholder="Enter Number Here" id="y"></div><div id="operators"><button class="opBut" id="add">+</button><button class="opBut" id="subtract">-</button><button class="opBut" id="multiply">*</button><button class="opBut" id="divide">/</button></div></div>');
+    $('#calculator').prepend('<div id="inputs"><div id= "calcLine"><input type="number" placeholder="Enter Number Here" id="x"><input type="number" placeholder="Enter Number Here" id="y"></div><div id="operators" ><button class="opBut" id="add">+</button><button class="opBut" id="subtract">-</button><button class="opBut" id="multiply">*</button><button class="opBut" id="divide">/</button></div></div>');
 }
 
 // Hosting all click handlers here for readability
@@ -67,7 +67,7 @@ function calculate() {
         data: {x, y, operator}
     }) .done(function(response){
         if (response.result === null) {
-            alert('Enter numbers!');
+            alert('Enter numbers before hitting operator!');
         }
         // Uses the result returned from the server and posts it to the DOM
         $('#result').text("Result = " + response.result);
