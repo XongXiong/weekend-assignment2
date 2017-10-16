@@ -2,36 +2,13 @@ var express = require('express')
 var app = express();
 var bodyParser = require('body-parser');
 var port = 5000;
+var calculator = require('./routes/calcRoute.js')
+
+app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use(express.static('server/public'));
 
-app.use(bodyParser.urlencoded({extended:true}));
-
-app.post('/calculator', function(req, res) {
-    console.log(req.body);
-    // Create variabes serverside to make things look prettier
-    var x = parseInt(req.body.x);
-    var y = parseInt(req.body.y);
-    var operator = req.body.operator;
-    var result = 0;
-    // Run switch statement to run calculations to return a result. 
-    switch(operator) {
-        case '+':
-            result = x + y;
-            break;
-        case '-':
-            result = x - y;
-            break;
-        case '*':
-            result = x * y;
-            break;
-        case '/':
-            result = x / y;
-            break;
-    }
-    // Sends the result as an object to the client to post to the DOM
-    res.send({result});
-}) 
+app.use('/calculator', calculator);
 
 app.listen(port , function(){
     console.log('listening on port', port);

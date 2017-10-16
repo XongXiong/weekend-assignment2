@@ -24,7 +24,7 @@ function clickHandler() {
 }
 
 // Resets the result section and replaces it with the default line
-function resetResult(){
+function resetResult() {
     $('#results').empty();
     $('#result').replaceWith('<div id="result">Result = Well you have to calculate something dummy ;P</div>')
 }
@@ -33,25 +33,25 @@ function resetResult(){
 var operator = '';
 
 // Functions to change the operator when the use selects the button corresponding to the operator
-function adding(){
+function adding() {
     operator = '+';
     $('.opBut').removeClass('selectedButton');
     $(this).addClass('selectedButton');
 }
 
-function subtracting(){
+function subtracting() {
     operator = '-';
     $('.opBut').removeClass('selectedButton');
     $(this).addClass('selectedButton');
 }
 
-function multiplying(){
+function multiplying() {
     operator = '*';
     $('.opBut').removeClass('selectedButton');
     $(this).addClass('selectedButton');
 }
 
-function dividing(){
+function dividing() {
     operator = '/';
     $('.opBut').removeClass('selectedButton');
     $(this).addClass('selectedButton');
@@ -64,15 +64,14 @@ function calculate() {
     $.ajax({
         method: 'POST',
         url: '/calculator',
-        data: {x, y, operator}
-    }) .done(function(response){
+        data: { x, y, operator }
+    }).done(function (response) {
         if (response.result === null) {
             alert('Enter numbers before hitting operator!');
         }
         // Uses the result returned from the server and posts it to the DOM
         $('#result').text("Result = " + response.result);
-    }) .fail(function(message){
+    }).fail(function (message) {
         console.log('error', message);
     })
 }
-
